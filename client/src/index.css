@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(18, 100%, 58%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Widako brand colors */
+  --widako-orange: hsl(18, 100%, 58%);
+  --widako-orange-light: hsl(22, 100%, 63%);
+  --widako-dark: hsl(210, 11%, 15%);
+  --widako-gray: hsl(210, 8%, 46%);
+  --widako-light: hsl(210, 14%, 97%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(18, 100%, 58%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(18, 100%, 58%) 0%, hsl(22, 100%, 63%) 100%);
+  }
+  
+  .property-card {
+    transition: all 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px hsla(18, 100%, 58%, 0.15);
+  }
+  
+  .search-input:focus {
+    border-color: hsl(18, 100%, 58%);
+    box-shadow: 0 0 0 3px hsla(18, 100%, 58%, 0.1);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, hsl(18, 100%, 58%) 0%, hsl(22, 100%, 63%) 100%);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px hsla(18, 100%, 58%, 0.3);
+  }
+
+  .widako-orange {
+    color: hsl(18, 100%, 58%);
+  }
+
+  .bg-widako-orange {
+    background-color: hsl(18, 100%, 58%);
+  }
+
+  .bg-widako-orange-light {
+    background-color: hsl(22, 100%, 63%);
+  }
+
+  .text-widako-dark {
+    color: hsl(210, 11%, 15%);
+  }
+
+  .bg-widako-dark {
+    background-color: hsl(210, 11%, 15%);
+  }
+
+  .text-widako-gray {
+    color: hsl(210, 8%, 46%);
+  }
+
+  .bg-widako-light {
+    background-color: hsl(210, 14%, 97%);
+  }
+}
